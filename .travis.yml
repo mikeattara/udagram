@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 14
+  - 13
 
 services:
   - docker
@@ -21,15 +21,15 @@ script:
   - docker build -t udagram-frontend ./udagram-frontend
   - docker build -t udagram-reverseproxy ./udagram-reverseproxy
   # Tagging
-  - docker build -t udagram-api-feed mikeattara/udagram-api-feed:v1
-  - docker build -t udagram-api-user mikeattara/udagram-api-user:v1
-  - docker build -t udagram-frontend mikeattara/udagram-frontend:v1
-  - docker build -t udagram-reverseproxy mikeattara/udagram-reverseproxy:v1
+  - docker build -t udagram-api-feed mikeattara/udagram-api-feed:latest
+  - docker build -t udagram-api-user mikeattara/udagram-api-user:latest
+  - docker build -t udagram-frontend mikeattara/udagram-frontend:latest
+  - docker build -t udagram-reverseproxy mikeattara/udagram-reverseproxy:latest
 
 after_success:
   # Push
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push mikeattara/udagram-api-feed:v1
-  - docker push mikeattara/udagram-api-user:v1
-  - docker push mikeattara/udagram-frontend:v1
-  - docker push mikeattara/udagram-reverseproxy:v1
+  - docker push mikeattara/udagram-api-feed:latest
+  - docker push mikeattara/udagram-api-user:latest
+  - docker push mikeattara/udagram-frontend:latest
+  - docker push mikeattara/udagram-reverseproxy:latest
