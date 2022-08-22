@@ -8,10 +8,10 @@ spec:
   selector:
     matchLabels:
       service: backend-user
-  replicas: 2
+  replicas: 1
   strategy:
     rollingUpdate:
-      maxSurge: 2
+      maxSurge: 1
       maxUnavailable: 25%
     type: RollingUpdate
   template:
