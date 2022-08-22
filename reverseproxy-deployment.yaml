@@ -17,6 +17,7 @@ spec:
       containers:
         - image: mikeattara/udagram-reverseproxy:v1
           name: reverseproxy
+          imagePullPolicy: Always
           resources:
             requests:
               memory: 64Mi
