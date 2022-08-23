@@ -19,13 +19,13 @@ spec:
           name: backend-user
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           resources:
             requests:
               memory: 64Mi
               cpu: 250m
             limits:
-              memory: 250Mi
+              memory: 1024Mi
               cpu: 500m
           env:
             - name: URL

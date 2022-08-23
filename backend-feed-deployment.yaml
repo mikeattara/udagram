@@ -19,14 +19,14 @@ spec:
           name: backend-feed
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
           resources:
             requests:
               memory: 64Mi
-              cpu: 250m
-            limits:
-              memory: 250Mi
               cpu: 500m
+            limits:
+              memory: 1024Mi
+              cpu: 1000m
           env:
             - name: URL
               valueFrom:
