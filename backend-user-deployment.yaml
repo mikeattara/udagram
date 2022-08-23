@@ -5,7 +5,7 @@ metadata:
     service: backend-user
   name: backend-user
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       service: backend-user
@@ -25,7 +25,7 @@ spec:
               memory: 64Mi
               cpu: 250m
             limits:
-              memory: 150Mi
+              memory: 250Mi
               cpu: 500m
           env:
             - name: URL
