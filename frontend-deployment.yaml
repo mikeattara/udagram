@@ -17,16 +17,16 @@ spec:
         api: external
     spec:
       containers:
-        - image: mikeattara/udagram-frontend:v5
+        - image: mikeattara/udagram-frontend:latest
           name: frontend
           imagePullPolicy: Always
           ports:
             - containerPort: 80
           resources:
             requests:
-              memory: 1024Mi
+              memory: 64Mi
               cpu: 250m
             limits:
-              memory: 2048Mi
+              memory: 1024Mi
               cpu: 500m
       restartPolicy: Always

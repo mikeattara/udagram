@@ -8,29 +8,24 @@ spec:
   selector:
     matchLabels:
       service: backend-feed
-  replicas: 2
-  strategy:
-    rollingUpdate:
-      maxSurge: 2
-      maxUnavailable: 25%
-    type: RollingUpdate
+  replicas: 1
   template:
     metadata:
       labels:
         service: backend-feed
     spec:
       containers:
-        - image: mikeattara/udagram-api-feed:v1
+        - image: mikeattara/udagram-api-feed:latest
           name: backend-feed
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
           resources:
             requests:
-              memory: 1024Mi
+              memory: 64Mi
               cpu: 250m
             limits:
-              memory: 2048Mi
+              memory: 1024Mi
               cpu: 500m
           env:
             - name: URL
