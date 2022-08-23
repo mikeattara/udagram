@@ -5,10 +5,10 @@ metadata:
     service: backend-user
   name: backend-user
 spec:
+  replicas: 1
   selector:
     matchLabels:
       service: backend-user
-  replicas: 2
   template:
     metadata:
       labels:
