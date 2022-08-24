@@ -9,4 +9,4 @@ data:
   JWT_SECRET: development
   POSTGRES_DB: postgres
   POSTGRES_HOST: udagramdb.cfglv2r44wzv.us-east-1.rds.amazonaws.com
-  URL: http://localhost:8100
+  URL: http://a1f186aa9ead44ac4a018518fea0fce2-2068540617.us-east-1.elb.amazonaws.com
